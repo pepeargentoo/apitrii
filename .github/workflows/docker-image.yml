@@ -31,8 +31,7 @@ jobs:
         - name: Build Docker image
           run: docker build . -t ${{github.sha}}
 
-        - name: Push Docker image
-          run: docker push ${{github.sha}}
+      
 
         - name: Deploy Docker image
           run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image ${{github.sha}} --region us-east1 --platform managed --port=80
