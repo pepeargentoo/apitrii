@@ -25,9 +25,6 @@ jobs:
         - name: Configure Docker
           run: gcloud auth configure-docker --quiet
 
-        - name: Checkout repository
-          uses: Dockerfile
-
         - name: Build Docker image
           run: sudo docker build . -t ${{github.sha}}
 
