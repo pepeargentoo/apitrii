@@ -34,4 +34,4 @@ jobs:
 
 
         - name: Deploy Docker image
-          run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image $IMAGE_NAME --region us-east1 --platform managed --port=80
+          run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/$IMAGE_NAME --region us-east1 --platform managed --port=80
