@@ -26,7 +26,7 @@ jobs:
           run: gcloud auth configure-docker --quiet
 
         - name: Checkout repository
-          uses: pepeargentoo/apitrii
+          uses: docker/build-push-action@v2
 
         - name: Build Docker image
           run: sudo docker build . -t ${{github.sha}}
