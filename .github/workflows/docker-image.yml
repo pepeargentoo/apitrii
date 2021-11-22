@@ -7,7 +7,7 @@ on:
     branches: [ dev ]
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: danielponce/apitrii
 jobs:
     deploy:
       name: Deploy to dev
