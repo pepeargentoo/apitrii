@@ -25,11 +25,14 @@ jobs:
         - name: Configure Docker
           run: gcloud auth configure-docker --quiet
 
+        - name: Checkout repository
+          uses: actions/checkout@v2
+
         - name: Build Docker image
-          run: sudo docker build . -t ${{github.sha}}
+          run: docker build . -t ${{github.sha}}
 
         - name: Push Docker image
-          run: sudo docker push ${{github.sha}}
+          run: docker push ${{github.sha}}
 
         - name: Deploy Docker image
           run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image ${{github.sha}} --region us-east1 --platform managed --port=80
