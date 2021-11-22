@@ -8,6 +8,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: danielponce/apitrii
+  GCP_PROJECT_ID: fastapitrii
 jobs:
     deploy:
       name: Deploy to dev
@@ -42,4 +43,4 @@ jobs:
 
 
         - name: Deploy Docker image
-          run: gcloud run deploy --project ${{ secrets.GCP_PROJECT_ID }} --image $IMAGE_NAME --region us-east1 --platform managed --port=80
+          run: gcloud run deploy --project $GCP_PROJECT_ID --image $IMAGE_NAME --region us-east1 --platform managed --port=80
