@@ -43,4 +43,4 @@ jobs:
 
 
         - name: Deploy Docker image
-          run: gcloud run deploy  --image  gcr.io/fastapitrii/$IMAGE_NAME --region us-east1 --platform managed --port=80
+          run: gcloud run deploy <SERVICE> --image  gcr.io/fastapitrii/$IMAGE_NAME --region us-east1 --platform managed --port=80
