@@ -20,12 +20,12 @@ jobs:
             service_account_email: ${{ secrets.GCP_EMAIL }}
             service_account_key: ${{ secrets.GCP_CREDENTIALS }}
         - name: check
-          run: echo $IMAGE_NAME
+          run: echo ${{github.sha}}
+
         - name: Configure Docker
           run: gcloud auth configure-docker --quiet
 
-        - name: Checkout repository
-          uses: actions/checkout@v2
+        
 
         - name: Build Docker image
           run: sudo docker build . -t ${{github.sha}}
