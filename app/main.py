@@ -2,4 +2,4 @@ from fastapi import FastAPI
 app = FastAPI()
 @app.get("/")
 def read_root():
-    return {"Trii": "Hello Pepe"}
+    return {"Trii": "Test ci/cd Trii"}
