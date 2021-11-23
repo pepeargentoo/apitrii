@@ -41,6 +41,5 @@ jobs:
 
         - name: Push Docker image
           run: docker tag appdocker ${{ secrets.DOCKER_USER }}/appdocker:${{ github.sha }}
-
         - name: Deploy Docker image
-            run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image $IMAGE_NAME --region us-central1 --platform managed
+          run: gcloud run deploy ${{ secrets.GCP_PROJECT_ID }} --image $IMAGE_NAME --region us-central1 --platform managed
