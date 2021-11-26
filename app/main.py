@@ -11,3 +11,8 @@ def index():
 @app.get("/Dani")
 def getdani():
     return {"Trii": "Pepe pepe"}
+
+
+@app.get("/felipe")
+def getfelipe():
+    return {"Trii": "open"}
