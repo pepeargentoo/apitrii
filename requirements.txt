@@ -1,0 +1,7 @@
+fastapi
+gunicorn
+pydantic
+pytest
+pre-commited
+black
+flake8
