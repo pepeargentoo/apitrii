@@ -21,8 +21,8 @@ jobs:
             source: "app"
             mypy-options: "--ignore-missing-imports --show-error-codes"
             pylint-options: "--rcfile=setup.cfg"
-            isort-options: "-w 100",
-            django: tflase
+            isort-options: "-w 100"
+            django: flase
         - name: Login
           uses: google-github-actions/setup-gcloud@master
           with:
