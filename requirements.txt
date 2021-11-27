@@ -1,7 +1,7 @@
 fastapi
 gunicorn
 pydantic
-pytest
-pre-commited
-black
 flake8
+black
+pytest
+pre-commit

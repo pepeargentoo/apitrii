@@ -1,3 +1,3 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9
-RUN pip install fastapi gunicorn pydantic flake8 black pytest pre-commit
+ADD requirements.txt /requirements.txt
 COPY ./app /app
