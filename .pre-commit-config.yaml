@@ -3,10 +3,8 @@ repos:
     rev: 3.8.3
     hooks:
       - id: flake8
-        stages: [commit]
   - repo: https://github.com/ambv/black
     rev: 20.8b1
     hooks:
       - id: black
-        stages: [commit]
         language_version: python3.9
