@@ -13,6 +13,11 @@ def getdani():
     return {"Trii": "Pepe pepe"}
 
 
+@app.get("/Pepe")
+def getdanoi():
+    return {"Trii": "Pepe pepe"}
+
+
 @app.get("/felipe")
 def getfelipe():
     return {"Trii": "open"}
