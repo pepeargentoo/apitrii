@@ -24,7 +24,7 @@ jobs:
             use-black: true
             use-mypy: true
             use-isort: true
-            extra-mypy-options: "ignore_missing_imports = True"
+            extra-mypy-options: "mypy.conf"
 
         - name: Login
           uses: google-github-actions/setup-gcloud@master
