@@ -14,18 +14,15 @@ jobs:
       name: Deploy to dev
       runs-on: ubuntu-latest
       steps:
-        - name: Checkout Code
-          uses: actions/checkout@v2
+        - uses: actions/checkout@v2
+        - name: Python Linter
+          uses: sunnysid3up/python-linter@master
           with:
-            # Full git history is needed to get a proper list of changed files within `super-linter`
-            fetch-depth: 0
-        - name: Lint Code Base
-          uses: github/super-linter@v4
-          env:
-            VALIDATE_ALL_CODEBASE: false
-            DEFAULT_BRANCH: dev
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+            source: "app"
+            mypy-options: "--ignore-missing-imports --show-error-codes"
+            pylint-options: "--rcfile=setup.cfg"
+            isort-options: "-w 100",
+            django: tflase
         - name: Login
           uses: google-github-actions/setup-gcloud@master
           with:
