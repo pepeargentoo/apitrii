@@ -21,6 +21,7 @@ jobs:
             source: "app"
             mypy-options: "--ignore-missing-imports --show-error-codes"
             pylint-options: "--rcfile=setup.cfg"
+            strict: "high"
             django: false
         - name: Login
           uses: google-github-actions/setup-gcloud@master
