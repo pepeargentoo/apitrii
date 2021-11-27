@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def index():
-    return {"Trii": "Test ci/cd Trii"}
+    return {"Trii": "Test ci/cd Triii"}
 
 
 @app.get("/Dani")
