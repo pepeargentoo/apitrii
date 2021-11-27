@@ -15,14 +15,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v2
-        - name: Python Linter
-          uses: sunnysid3up/python-linter@master
-          with:
-            source: "^(app)"
-            mypy-options: "--ignore-missing-imports --show-error-codes"
-            pylint-options: "--rcfile=setup.cfg"
-            strict: "high"
-            django: false
+        - uses: ricardochaves/python-lint@test
         - name: Login
           uses: google-github-actions/setup-gcloud@master
           with:
